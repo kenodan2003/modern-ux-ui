@@ -1,3 +1,3 @@
-export default function Pricing(){
-    return <div></div>
+export default function Pricing() {
+  return <div></div>;
 }
