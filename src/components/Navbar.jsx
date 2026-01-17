@@ -13,30 +13,37 @@ export default function Navbar() {
                 className="w-6 h-6 sm:w-8 sm:h-8"
               />
             </div>
-              <span>
-                <span className="text-lg sm:text-xl md:text-2xl font-medium">
-                  <span className="text-white">Code</span>
-                  <span className="text-blue-400">Flow</span>
-                </span>
+            <span>
+              <span className="text-lg sm:text-xl md:text-2xl font-medium">
+                <span className="text-white">Code</span>
+                <span className="text-blue-400">Flow</span>
               </span>
-           
+            </span>
           </div>
           {/* Navigation Links */}
           <div className="hidden  space-x-6 lg:space-x-8 items-center md:flex">
-            <a href="#features" className="text-gray-300 hover:text-white text-sm lg:text-base">
+            <a
+              href="#features"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Features
             </a>
-            <a href="#pricing" className="text-gray-300 hover:text-white text-sm lg:text-base">
+            <a
+              href="#pricing"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Pricing
             </a>
-            <a href="#testimonials" className="text-gray-300 hover:text-white text-sm lg:text-base">
+            <a
+              href="#testimonials"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Testimonials
             </a>
           </div>
-          <button className="md:hidden">
-            <Menu className="w-5 h-5 sm:w-6 sm:h-6"/>
+          <button className="md:hidden p-2 text-gray-300 hover:text-white">
+            <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
-        
         </div>
       </div>
     </nav>
