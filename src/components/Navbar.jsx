@@ -14,60 +14,45 @@ export default function Navbar({ scrolled }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
-          
-          {/* Logo */}
-          <div className="flex items-center space-x-1 cursor-pointer">
-            <img
-              src="/logo.png"
-              alt="CodeFlow"
-              className="w-6 h-6 sm:w-8 sm:h-8"
-            />
+          <div className="flex items-center space-x-1 group cursor-pointer">
+            <div>
+              <img
+                src="/logo.png"
+                alt="CodeFlow"
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              />
+            </div>
             <span className="text-lg sm:text-xl md:text-2xl font-medium">
               <span className="text-white">Code</span>
               <span className="text-blue-400">Flow</span>
             </span>
           </div>
 
-          {/* Desktop Nav Links */}
+          {/* Nav Links */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a href="#discover" className="text-gray-300 hover:text-white text-sm lg:text-base">
-              Discover
-            </a>
-            <a href="#tasks" className="text-gray-300 hover:text-white text-sm lg:text-base">
-              Tasks
-            </a>
-            <a href="#ai-tools" className="text-gray-300 hover:text-white text-sm lg:text-base">
-              AI Tools
-            </a>
-
-            {/* Original Links (KEPT) */}
-            <a href="#features" className="text-gray-300 hover:text-white text-sm lg:text-base">
+            <a
+              href="#features"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Features
             </a>
-            <a href="#testimonials" className="text-gray-300 hover:text-white text-sm lg:text-base">
-              Testimonials
-            </a>
-
-            <a href="#pricing" className="text-gray-300 hover:text-white text-sm lg:text-base">
+            <a
+              href="#pricing"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Pricing
             </a>
-            
+            <a
+              href="#testimonials"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              Testimonials
+            </a>
           </div>
 
-          {/* Auth CTA (Desktop) */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-300 hover:text-white text-sm">
-              Sign In
-            </button>
-            <button className="px-3 py-1.5 rounded-md bg-blue-500 hover:bg-blue-600 text-white text-sm">
-              Apply to Earn
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-gray-300 hover:text-white"
-            onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
+            onClick={() => setMobileMenuIsOpen((prev) => !prev)}
           >
             {mobileMenuIsOpen ? (
               <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -78,42 +63,30 @@ export default function Navbar({ scrolled }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuIsOpen && (
         <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 animate-in slide-in-from-top duration-300">
-          <div className="px-4 py-4 sm:py-6 space-y-4">
-            <a href="#discover" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
-              Discover
-            </a>
-            <a href="#tasks" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
-              Tasks
-            </a>
-            <a href="#ai-tools" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
-              AI Tools
-            </a>
-
-            {/* Original Links (KEPT) */}
-            <a href="#features" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
+          <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
+            <a
+              href="#features"
+              onClick={() => setMobileMenuIsOpen(false)}
+              className="block text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Features
             </a>
-            <a href="#testimonials" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
-              Testimonials
-            </a>
-
-            <a href="#pricing" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white">
+            <a
+              href="#pricing"
+              onClick={() => setMobileMenuIsOpen(false)}
+              className="block text-gray-300 hover:text-white text-sm lg:text-base"
+            >
               Pricing
             </a>
-         
-
-            {/* Mobile CTA */}
-            <div className="pt-3 border-t border-slate-800 space-y-3">
-              <button className="block w-full text-left text-gray-300 hover:text-white">
-                Sign In
-              </button>
-              <button className="block w-full text-center py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white">
-                Apply to Earn
-              </button>
-            </div>
+            <a
+              href="#testimonials"
+              onClick={() => setMobileMenuIsOpen(false)}
+              className="block text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              Testimonials
+            </a>
           </div>
         </div>
       )}
